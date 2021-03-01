@@ -1,0 +1,311 @@
+.homePage {
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: center;
+    padding: 10px;
+    background: #ada397;
+    width:64%;
+    margin:auto;
+}
+
+.slideshow-container {
+    max-width: 10%;
+    position: relative;
+    margin: auto
+}
+
+/* CSS selector for the images themself, give them a height of 100%
+so they fill their div parent, slideshow-container */
+.mySlides {
+  display: none;
+  height: 100%;
+     
+}
+
+/* CSS selector for the prev/next keys
+This moves them up to the sides of the images themselves
+Use absolute position to position with respect to the slideshow container div 
+change cursor image when hovered over*/
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #222428;
+    font-weight: bold;
+    font-size: 30px;
+    transition: .6s ease;
+    border-radius: 0 3px 3px 0
+}
+
+/* split the cursors apart to go on the sides of the images */
+.next {
+    right: -50px;
+    border-radius: 3px 3px 3px 3px
+}
+
+/*  */
+.prev {
+    left: -50px;
+    border-radius: 3px 3px 3px 3px
+}
+
+/* change the next/prev if they are being hovered over */
+.prev:hover,
+.next:hover {
+    color: #f2f2f2;
+    background-color: rgba(0, 0, 0, 0.8)
+}
+
+/* move text to top of images as captions */
+.text {
+    color: #f2f2f2;
+    font-size: smaller;
+    position: absolute;
+    top:0;
+    width: 100%;
+    text-align: center;
+    background-color: #222428
+}
+
+/* change cursor image when hovered over
+turn into circles 
+display inline-block to show items horizontally instead of vertical*/
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color .6s ease
+}
+
+/* change color of tab marker when in focus or current tab is being shown */
+.active,
+.dot:hover {
+    background-color: #717171
+}
+
+.aboutMePage {
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: left;
+    padding: 10px;
+    background: #ada397;
+    width:64%;
+    margin:auto;
+}
+
+.aboutMePage h1 {
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: center;
+    padding: 10px;
+    background: #ada397;
+    width:64%;
+    margin:auto;
+}
+
+.linkedIn img{
+    width: 10%;
+}
+/* BELOW IMPORTED FROM https://codepen.io/matmarsiglio/pen/HLIor IT IS SO PRETTY TO ME */
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+  color: #bbb5af;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
+  color: #bbb5af;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::placeholder, textarea::focus:placeholder {
+  color: #bbb5af;
+}
+
+input::-ms-placeholder, textarea::-ms-placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::-ms-placeholder, textarea:focus::-ms-placeholder {
+  color: #bbb5af;
+}
+
+/* on hover placeholder */
+
+input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::-webkit-input-placeholder, textarea:hover:focus::-webkit-input-placeholder {
+  color: #cbc6c1;
+}
+
+input:hover::-moz-placeholder, textarea:hover::-moz-placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::-moz-placeholder, textarea:hover:focus::-moz-placeholder {
+  color: #cbc6c1;
+}
+
+input:hover::placeholder, textarea:hover::placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::placeholder, textarea:hover:focus::placeholder {
+  color: #cbc6c1;
+}
+
+input:hover::placeholder, textarea:hover::placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
+  color: #cbc6c1;
+}
+
+/*body {
+  font-family: 'Lato', sans-serif;
+  background: #e2dedb;
+  color: #b3aca7;
+}*/
+.contactMe {
+    background: #ada397;
+    width: 64%;
+    margin:auto;
+}
+
+header {
+  position: relative;
+  margin: 0;
+  font-size: 2.3em;
+  font-family: "Lucida Console", "Courier New", monospace;
+  text-align: center;
+  letter-spacing: 7px;
+}
+
+form {
+  position: relative;
+  margin: auto;
+  text-align: center;
+
+  padding-bottom: 10px;
+}
+
+input {
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 0.875em;
+  width: 60%;
+  height:auto;
+  padding: 0px 15px 0px 15px;
+  
+  background: #d6cbd3;
+  outline: none;
+  color: black;
+
+  border: solid 1px #b3aca7;
+
+  border-bottom: none;
+  
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+input:hover {
+  background: #b3aca7;
+  color: #e2dedb;
+}
+
+textarea {
+  width: 60%;
+  height:auto;
+  padding: 15px;
+  
+  background: #d6cbd3;
+  outline: none;
+
+  border: solid 1px #b3aca7;
+  
+  color: black;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 0.875em;
+  
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+textarea:hover {
+  background: #b3aca7;
+  color: #e2dedb;
+}
+
+#submit {
+  width: 60%;
+  height:auto;
+  
+  padding: 0;
+  margin: -5px 0px 0px 0px;
+  
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 0.875em;
+  color: black;
+  
+  outline:none;
+  cursor: pointer;
+  border-top: none;
+}
+
+#submit:hover {
+  color: #e2dedb;
+}
+
+.scrollable {
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: left;
+    height: 90px;
+    padding: 10px;
+    background: #ada397;
+    margin: auto;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.projects, header{
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: center;
+    background: #ada397;
+    width:65%;
+    margin:auto;
+}
+
+li {
+    font-size: x-large;
+}

@@ -1,0 +1,77 @@
+/* Table-layout fixed so it doesn't adjust size
+depending on its contents
+
+No border-spacing and padding so table cells have 
+no space between them, so background is filled */
+
+.gameDiv{
+    width: 65%;
+    margin: auto;
+}
+
+.background{
+	background: #bdcebe;
+	table-layout: fixed;
+	border-spacing: 0;
+}
+
+.background td{
+	padding: 0;
+}
+
+.lava{
+	background: rgb(255, 100, 100);
+}
+
+.wall{
+	background: #d5e1df;
+}
+
+.actor{
+	position: absolute;
+	margin:0;
+}
+
+.coin{
+	background: #eca1a6;
+}
+
+.player{
+	background: #ada397;
+}
+
+/* this is used to give games wrapping DOM max size so anything outside does not show
+
+relative position so actors inside are positioned relative to levels top left corner */
+
+.game {
+	overflow: visible;
+	max-width: 100%;
+	max-height: 100%;
+	position: relative;
+}
+
+/* style player differently if they won or lost*/
+
+/* scorching effect */
+.lost .player {
+ 	background: rgb(160, 64, 64);
+}
+
+/* halo effect */
+.won .player {
+ 	box-shadow: -4px -7px 8px white, 4px -7px 8px white;
+}
+
+.directions {
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: center;
+    padding: 10px;
+    background: #ada397;
+    width:64%;
+    margin:auto;
+}
+
+body {
+	background: #d6cbd3;
+}

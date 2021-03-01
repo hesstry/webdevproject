@@ -1,0 +1,96 @@
+<!-- add important letiable that lets game script know what page it is on-->
+<script>let current_page = 'home'</script>
+<script src="../js/intro_game.js"></script>
+	<div class="homePage">Welcome to my website dudes n dudettes, this is my homepage, hope y'all like it yo (-:
+	<!-- CODE BELOW FROM https://betterprogramming.pub/make-a-slideshow-with-automatic-and-manual-controls-using-html-css-and-javascript-b7e9305168f9 -->
+	<!-- make div container for the entire carousel -->
+	<div class="slideshow-container">
+		<!-- make div containers for each image of the carousel -->
+		<div class="mySlides fade">
+		<img src='../img/image0.jpg' style='width: 100%;' alt="derp 0"/>
+			<!-- make div containers for each text to go along with the photos -->
+			<div class="text">Derp 0</div>
+		</div>
+		<div class="mySlides fade">
+		<img  src='../img/image1.jpg' style='width: 100%;' alt="derp 1"/>
+			<div class="text">Derp 1</div>
+		</div>
+
+		<div class="mySlides fade">
+		<img  src='../img/image2.jpg' style='width: 100%;' alt="pelican"/>
+			<div class="text">Derp 2</div>
+		</div>
+		<!-- prev/next buttons to add user control to the carousel -->
+		<a class="prev" onclick='plusSlides(-1)'>&#10094;</a>
+		<a class="next" onclick='plusSlides(1)'>&#10095;</a>
+
+		<!-- carousel tabs to give user more freedom in what part of carousel to see -->
+		<div style='text-align: center;'>
+		  <!-- add onclick functions so the tabbing mechanism is responsive -->
+		  <span class="dot" onclick='currentSlide(1)'></span>
+		  <span class="dot" onclick='currentSlide(2)'></span>
+		  <span class="dot" onclick='currentSlide(3)'></span>
+		</div>
+	</div>
+</div>
+
+<script>
+
+	let slideIndex = 1;
+
+	function plusSlides(n){
+		clearInterval(myTimer);
+		// based on input, negative n means prev was pushed, positive n means next was pushed on carousel
+		if (n < 0){
+			showSlides(slideIndex -= 1);
+		} else {
+			showSlides(slideIndex += 1); 
+		}
+		if (n === -1){
+		// setInterval allows for manual input for period-of-execution of given function
+		// this is nice so that we don't have to keep calling the function over and over with 
+		// setTimeout
+			// add 2 since plusSlides will use this value to make the slide index = slide.length
+			myTimer = setInterval(function(){plusSlides(n + 2)}, 4000);
+			// if n is not equal to -1, then plusSlides uses this value to go right, or if n + 1 > slides.length, it will make the slide index = 1
+		} else {
+			myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+		}
+	}
+
+	function showSlides(n){
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("dot");
+	  // if n is too large, make it equal to 1, since it will be subtracted by 1, and end up being index 0 of slides, as we want to happen if we go right after the last image in the carousel
+	  if (n > slides.length) {slideIndex = 1}
+	  // if n is too small, make it equal slides.length,  since it will be subtracted by 1, and end up being index of the last element in the carousel, as we want if we press left after the first image
+	  if (n < 1) {slideIndex = slides.length}
+	  // force display of all slides to none before making display on focused image = block
+	  for (i = 0; i < slides.length; i++) {
+	      slides[i].style.display = "none";
+	  }
+	  // make all dots inactive before making the focused dot correlating to the focused image active
+	  for (i = 0; i < dots.length; i++) {
+	      dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  // make focused image and dot active for the carousel by displaying the image and giving active class to the dot
+	  slides[slideIndex-1].style.display = "block";
+	  dots[slideIndex-1].className += " active";
+	}
+
+	// create interval of carousel once page is loaded
+	// assign interval to variable so we can cancel it when we'd like
+	window.addEventListener("load",function() {
+	    showSlides(slideIndex);
+	    myTimer = setInterval(function(){plusSlides(1)}, 4000);
+	})
+
+	// currentSlide cancels past timer to ensure timer stack is cleared, and then creates a new interval timer that will start on the tab the user clicks
+	function currentSlide(n){
+	  clearInterval(myTimer);
+	  myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+	  showSlides(slideIndex = n);
+	}
+
+</script>

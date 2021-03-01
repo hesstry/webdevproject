@@ -1,0 +1,18 @@
+<script>let current_page = 'contactme' </script>
+<script src="../js/intro_game.js"></script>
+<div class="contactMe">
+	<header>Contact Me</header>
+
+	<!-- mailto forms take the input names as keys and give them values based on
+	the input from the user
+
+	these values are then used to be written inside the body of an email on the devices mailing application -->
+	<form id="form" class="topBefore" method="POST" action="mailto:hesstry@oregonstate.edu">
+			
+		<input id="name" name="name" type="text" placeholder="NAME">
+		<input id="email" name="email" type="email" placeholder="E-MAIL">
+		<textarea id="message" name="body" type="text" placeholder="MESSAGE"></textarea>
+		<input id="submit" type="submit" value="GO!">
+	  
+	</form>
+</div>
