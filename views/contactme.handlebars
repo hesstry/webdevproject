@@ -1,0 +1,23 @@
+<script>let current_page = 'contactme' </script>
+<script src="../js/intro_game.js"></script>
+<div class="contactMe">
+	<header>Contact Me</header>
+
+	<form id="form" class="topBefore" method="post">
+			
+		<input id="name" name="name" type="text" placeholder="NAME">
+		<input id="email" name="email" type="text" placeholder="E-MAIL">
+		<textarea id="message" name="message" type="text" placeholder="MESSAGE"></textarea>
+		<input id="submit" type="submit" value="GO!">
+	  
+	</form>
+</div>
+
+<script>
+let submit = document.querySelector("#submit");
+submit.addEventListener("submit", event=>{event.preventDefault();});
+</script>
+
+{{#if data}}
+<p style="text-align:center">NAME: {{data.name}} EMAIL: {{data.email}} MESSAGE: {{data.message}}</p>
+{{/if}}
