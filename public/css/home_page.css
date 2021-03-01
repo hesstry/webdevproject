@@ -108,6 +108,10 @@ display inline-block to show items horizontally instead of vertical*/
     margin:auto;
 }
 
+button a {
+  color: inherit;
+}
+
 .linkedIn img{
     width: 10%;
 }
